@@ -146,19 +146,19 @@ html, body
 /* styles for main gui boxes */
 #main-wrapper
 {
-	width:410px;
+	width:370px;
 	top:5px;
 	bottom:25px;
 	left:5px;
 }
 #main-input
 {
-	width:390px;
+	width:350px;
 	height:140px;
 }
 #main-output
 {
-	width:390px;
+	width:350px;
 	top:160px;			/* main-input.height+2*gui-box.margin+2*gui-box.padding */
 	bottom:0px;
 }
@@ -233,7 +233,7 @@ html, body
 	position:absolute;
 	bottom:20px;
 	top:65px;
-	width:380px;
+	width:340px;
 	overflow:auto;
 	margin:5px;
 }

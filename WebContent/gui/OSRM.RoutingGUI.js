@@ -109,6 +109,8 @@ inputChanged: function(marker_id) {
 
 // click: button "open JOSM"
 openJOSM: function() {
+	window.open( "http://ump.fuw.edu.pl/wiki" );
+	/*
 	var center = OSRM.G.map.getCenterUI();
 	var bounds = OSRM.G.map.getBoundsUI();
 	
@@ -125,12 +127,13 @@ openJOSM: function() {
 		frame.id = 'josm-frame';
 	}
 	frame.src = url;
+	*/
 },
 
 //click: button "open OSM Bugs"
 openOSMBugs: function() {
 	var position = OSRM.G.map.getCenterUI();
-	window.open( "http://osmbugs.org/?lat="+position.lat.toFixed(6)+"&lon="+position.lng.toFixed(6)+"&zoom="+OSRM.G.map.getZoom() );
+	window.open( "http://ump.fuw.edu.pl/flyspray/index.php?project=2" );
 },
 
 //click: button "delete marker"

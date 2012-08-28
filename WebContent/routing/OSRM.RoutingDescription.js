@@ -33,16 +33,18 @@ onClickCreateShortcut: function(src){
 	src += '&df=' + OSRM.G.active_distance_format;
 	src += '&re=' + OSRM.G.active_routing_engine;
 	
-	var source = OSRM.DEFAULTS.SHORTENER_PARAMETERS.replace(/%url/, OSRM.DEFAULTS.HOST_SHORTENER_URL+src); 
+//	var source = OSRM.DEFAULTS.SHORTENER_PARAMETERS.replace(/%url/, OSRM.DEFAULTS.HOST_SHORTENER_URL+src);
+	var source = OSRM.DEFAULTS.HOST_SHORTENER_URL+OSRM.DEFAULTS.SHORTENER_PARAMETERS.replace(/%url/, encodeURIComponent(src));
 	
 	OSRM.JSONP.call(source, OSRM.RoutingDescription.showRouteLink, OSRM.RoutingDescription.showRouteLink_TimeOut, OSRM.DEFAULTS.JSONP_TIMEOUT, 'shortener');
 	document.getElementById('route-link').innerHTML = '['+OSRM.loc("GENERATE_LINK_TO_ROUTE")+']';
 },
 showRouteLink: function(response){
-	if(!response[OSRM.DEFAULTS.SHORTENER_REPLY_PARAMETER])
+	var resp = response[OSRM.DEFAULTS.SHORTENER_REP1][OSRM.DEFAULTS.SHORTENER_REP2];
+	if(!resp)
 		OSRM.RoutingDescription.showRouteLink_TimeOut();
 	else
-		document.getElementById('route-link').innerHTML = '[<a class="route-link" href="' +response[OSRM.DEFAULTS.SHORTENER_REPLY_PARAMETER]+ '">'+response[OSRM.DEFAULTS.SHORTENER_REPLY_PARAMETER]+'</a>]';
+		document.getElementById('route-link').innerHTML = '[<a class="route-link" target="_parent" href="' +resp+ '">'+resp+'</a>]';
 },
 showRouteLink_TimeOut: function(){
 	document.getElementById('route-link').innerHTML = '['+OSRM.loc("LINK_TO_ROUTE_TIMEOUT")+']';

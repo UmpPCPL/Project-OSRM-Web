@@ -69,7 +69,7 @@ OSRM.Localization["en"] = {
 "OVERVIEW_MAP": "Overview Map",
 "NO_ROUTE_SELECTED": "No route selected",
 // routing engines
-"ENGINE_0": "Car (fastest)",
+"ENGINE_0": "Car (OSM)",
 "ENGINE_1": "Car (Poland only)",
 "ENGINE_2": "Bike (Poland only)",
 // directions
@@ -132,7 +132,7 @@ OSRM.Localization["en"] = {
 									"<br/><br/>" +
 									"You can even create intermediate markers by dragging them off of the main route! ",
 // do not translate below this line
-"GUI_LEGAL_NOTICE": "Routing by <a href='http://project-osrm.org/'>Project OSRM</a> - Geocoder by <a href='http://wiki.openstreetmap.org/wiki/Nominatim/'>Nominatim</a> - OSRM hosting by <a href='http://algo2.iti.kit.edu/'>KIT</a>",
+"GUI_LEGAL_NOTICE": "GUI2 v"+OSRM.VERSION+" "+"- Routing engine and Web GUI: <a href='http://project-osrm.org/'>OSRM</a> - Geocoder: <a href='http://www.osm.org/'>OSM</a>",
 "GUI_DATA_TIMESTAMP": "data: ",
 "GUI_VERSION": "gui: "
 };

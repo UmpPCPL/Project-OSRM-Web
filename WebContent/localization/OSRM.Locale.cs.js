@@ -67,7 +67,9 @@ OSRM.Localization["cs"] = {
 "OVERVIEW_MAP": "Přehledová mapka",
 "NO_ROUTE_SELECTED": "Ne vybranou trasu",
 // routing engines
-"ENGINE_0": "Auto (nejrychlejší)",
+"ENGINE_0": "Auto (OSM)",
+"ENGINE_1": "Auto (UMP)",
+"ENGINE_2": "Kolo (UMP)",
 // directions
 "N": "sever",
 "E": "východ",

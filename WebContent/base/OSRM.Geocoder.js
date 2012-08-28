@@ -258,12 +258,27 @@ _showReverseResults: function(response, parameters) {
 	if( response.address.road) {
 		address += response.address.road;
 		used_address_data++;
-	}
+	} else if( response.address.path) {
+        address += response.address.path;
+        used_address_data++;
+    }
+	
+	if( response.address.house_number) {
+        if( used_address_data > 0 )
+            address += " ";
+        address += response.address.house_number;
+    }
+	
 	if( response.address.city ) {
 		if( used_address_data > 0 )
 			address += ", ";
 		address += response.address.city;
 		used_address_data++;
+	} else if( response.address.town ) {
+        if( used_address_data > 0 )
+            address += ", ";
+        address += response.address.town;
+        used_address_data++;
 	} else if( response.address.village ) {
 		if( used_address_data > 0 )
 			address += ", ";
