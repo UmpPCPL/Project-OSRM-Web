@@ -47,7 +47,7 @@ OSRM.Localization["pl"] = {
 "GUI_HIGHLIGHT_UNNAMED_ROADS": "Zaznacz ulice bez nazwy",
 "GUI_SHOW_PREVIOUS_ROUTES": "Pokaż poprzednie trasy",
 "OPEN_JOSM": "UMP wiki",
-"OPEN_OSMBUGS": "UMP FlySpray",
+"OPEN_OSMBUGS": "Zgłóś poprawki",
 // geocoder
 "SEARCH_RESULTS": "Wyniki wyszukiwania",
 "FOUND_X_RESULTS": "znaleziono %i wyników",
