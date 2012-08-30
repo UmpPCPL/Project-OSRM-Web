@@ -107,8 +107,8 @@ OSRM.Localization["pl"] = {
 "DIRECTION_15":"Cel został osiągnięty",
 //legal
 "GUI_LEGAL_NOTICE": "GUI2 v"+OSRM.VERSION+" "+"- Routing engine and Web GUI: <a href='http://project-osrm.org/'>OSRM</a> - Geocoder: <a href='http://www.osm.org/'>OSM</a>",
-"GUI_DATA_TIMESTAMP": "data: ",
-"GUI_VERSION": "gui: "
+"GUI_DATA_TIMESTAMP": "dane:  ",
+"GUI_VERSION": "gui:  "
 };
 
 // set GUI language on load

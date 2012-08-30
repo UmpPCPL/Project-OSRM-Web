@@ -92,8 +92,9 @@ initFinally: function() {
 initPosition: function() {
 	var position = new L.LatLng( OSRM.DEFAULTS.ONLOAD_LATITUDE, OSRM.DEFAULTS.ONLOAD_LONGITUDE);
 	OSRM.G.map.setViewUI( position, OSRM.DEFAULTS.ONLOAD_ZOOM_LEVEL, true);
-	if (navigator.geolocation && document.URL.indexOf("file://") == -1)		// convenience: FF does not save access rights for local files 
-		navigator.geolocation.getCurrentPosition(OSRM.Map.geolocationResponse);
+	if (OSRM.GEOLOCATION != 0)
+		if (navigator.geolocation && document.URL.indexOf("file://") == -1)		// convenience: FF does not save access rights for local files 
+			navigator.geolocation.getCurrentPosition(OSRM.Map.geolocationResponse);
 },
 
 // map event handlers
