@@ -63,7 +63,7 @@ OSRM.Localization["pl"] = {
 "GPX_FILE": "Plik GPX",
 "DISTANCE": "Dystans",
 "DURATION": "Czas",
-"YOUR_ROUTE_IS_BEING_COMPUTED": "Twoja trasa jest wyznaczona",
+"YOUR_ROUTE_IS_BEING_COMPUTED": "Twoja trasa jest wyznaczana",
 "NO_ROUTE_FOUND": "Nie można wyznaczyć trasy",
 // printing
 "OVERVIEW_MAP": "Mapa poglądowa",
@@ -106,7 +106,7 @@ OSRM.Localization["pl"] = {
 "DIRECTION_11-x":"Wjedź na rondo, zjedź wybranym przez siebie zjazdem [ w <b>%s</b>]",
 "DIRECTION_15":"Cel został osiągnięty",
 //legal
-"GUI_LEGAL_NOTICE": "GUI2 v"+OSRM.VERSION+" "+"- Routing engine and Web GUI: <a href='http://project-osrm.org/'>OSRM</a> - Geocoder: <a href='http://www.osm.org/'>OSM</a>",
+"GUI_LEGAL_NOTICE": "GUI2 v"+OSRM.VERSION+" "+"- Routing engine and GUI: <a href='http://project-osrm.org/'>OSRM</a> - Geocoder: <a href='http://wiki.openstreetmap.org/wiki/Nominatim'>OSM</a>",
 "GUI_DATA_TIMESTAMP": "dane:  ",
 "GUI_VERSION": "gui:  "
 };
