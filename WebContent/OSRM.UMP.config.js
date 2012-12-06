@@ -34,6 +34,11 @@ OSRM.DEFAULTS = {
 			timestamp: 'http://router.project-osrm.org/timestamp',
 			metric: 0,
 			label: 'ENGINE_0',
+		},
+		{	url: 'http://gen1.ump.torch.net.pl:5002/viaroute',
+			timestamp: 'http://gen1.ump.torch.net.pl:5002/timestamp',
+			metric: 0,
+			label: 'ENGINE_3',
 		}
 	],
 	
