@@ -48,6 +48,11 @@ init: function() {
 	}
 
 	// setup map
+	var opts=loadCookieOptions("ump_cookieB");
+	OSRM.DEFAULTS.ONLOAD_LONGITUDE = opts.lon || OSRM.DEFAULTS.ONLOAD_LONGITUDE;
+	OSRM.DEFAULTS.ONLOAD_LATITUDE = opts.lat || OSRM.DEFAULTS.ONLOAD_LATITUDE;
+	OSRM.DEFAULTS.ONLOAD_ZOOM_LEVEL = opts.zoom || OSRM.DEFAULTS.ONLOAD_ZOOM_LEVEL;
+
 	OSRM.G.map = new OSRM.Control.Map('map', {
     	center: new L.LatLng(OSRM.DEFAULTS.ONLOAD_LATITUDE, OSRM.DEFAULTS.ONLOAD_LONGITUDE),
 	    zoom: OSRM.DEFAULTS.ONLOAD_ZOOM_LEVEL,
@@ -78,6 +83,7 @@ init: function() {
 
 	// map events
 	OSRM.G.map.on('zoomend', OSRM.Map.zoomed );
+	OSRM.G.map.on('moveend', OSRM.Map.moved );
 	OSRM.G.map.on('click', OSRM.Map.click );
 	OSRM.G.map.on('contextmenu', OSRM.Map.contextmenu );
 	OSRM.G.map.on('mousemove', OSRM.Map.mousemove );
@@ -93,7 +99,7 @@ initFinally: function() {
 initPosition: function() {
 	var position = new L.LatLng( OSRM.DEFAULTS.ONLOAD_LATITUDE, OSRM.DEFAULTS.ONLOAD_LONGITUDE);
 	OSRM.G.map.setViewUI( position, OSRM.DEFAULTS.ONLOAD_ZOOM_LEVEL, true);
-	if (OSRM.GEOLOCATION != 0)
+	if (OSRM.DEFAULT.GEOLOCATION != 0)
 		if (navigator.geolocation && document.URL.indexOf("file://") == -1)		// convenience: FF does not save access rights for local files 
 			navigator.geolocation.getCurrentPosition(OSRM.Map.geolocationResponse);
 },
@@ -104,6 +110,10 @@ zoomed: function(e) {
 		OSRM.Routing.getRoute_Dragging();
 	else
 		OSRM.Routing.getRoute_Redraw({keepAlternative:true});
+	saveMapPosCookie(OSRM.G.map);
+},
+moved: function(e) {
+	 saveMapPosCookie(OSRM.G.map);
 },
 contextmenu: function(e) {;},
 mousemove: function(e) { OSRM.Via.drawDragMarker(e); },
