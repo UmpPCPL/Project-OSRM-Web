@@ -48,7 +48,7 @@ init: function() {
 	}
 
 	// setup map
-	var opts=loadCookieOptions("ump_cookieB");
+	var opts=loadCookieOptions(OSRM.DEFAULTS.COOKIE);
 	OSRM.DEFAULTS.ONLOAD_LONGITUDE = opts.lon || OSRM.DEFAULTS.ONLOAD_LONGITUDE;
 	OSRM.DEFAULTS.ONLOAD_LATITUDE = opts.lat || OSRM.DEFAULTS.ONLOAD_LATITUDE;
 	OSRM.DEFAULTS.ONLOAD_ZOOM_LEVEL = opts.zoom || OSRM.DEFAULTS.ONLOAD_ZOOM_LEVEL;

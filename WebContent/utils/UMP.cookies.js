@@ -49,5 +49,5 @@ function saveMapPosCookie(map) {
         cookieOptions.lon = pos.lng;
         cookieOptions.lat = pos.lat;
         cookieOptions.zoom = map.getZoom();
-        saveCookieOptions("ump_cookieB",cookieOptions);
+        saveCookieOptions(OSRM.DEFAULTS.COOKIE,cookieOptions);
 }

@@ -53,7 +53,7 @@ OSRM.DEFAULTS = {
 	SHORTENER_REPLY_PARAMETER: 'shorturl',
 	SHORTENER_REP1: 'data',
 	SHORTENER_REP2: 'url',	
-	COOKIE: 'ump_cookieB',
+	COOKIE: 'ump_cookieC',
 	
 	ROUTING_ENGINE: 0,
 	DISTANCE_FORMAT: 0,														// 0: km, 1: miles
