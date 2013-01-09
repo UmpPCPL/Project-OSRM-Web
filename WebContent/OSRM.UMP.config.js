@@ -20,13 +20,13 @@ or see http://www.gnu.org/licenses/agpl.txt.
 
 OSRM.DEFAULTS = {
 	ROUTING_ENGINES: [
-		{	url: 'http://mapa.ump.waw.pl/ump-www/viaroute',
-			timestamp: 'http://mapa.ump.waw.pl/ump-www/timestamp',
+		{	url: 'http://osrm1.ump.waw.pl/OSRMauto/viaroute',
+			timestamp: 'http://osrm1.ump.waw.pl/OSRMauto/timestamp',
 			metric: 0,
 			label: 'ENGINE_1',
 		},
-		{	url: 'http://mapa.ump.waw.pl/ump-www/rower/viaroute',
-			timestamp: 'http://mapa.ump.waw.pl/ump-www/rower/timestamp',
+		{	url: 'http://osrm1.ump.waw.pl/OSRMrower/viaroute',
+			timestamp: 'http://osrm1.ump.waw.pl/OSRMrower/timestamp',
 			metric: 0,
 			label: 'ENGINE_2',
 		},
@@ -35,8 +35,8 @@ OSRM.DEFAULTS = {
 			metric: 0,
 			label: 'ENGINE_0',
 		},
-		{	url: 'http://gen1.ump.torch.net.pl:5002/viaroute',
-			timestamp: 'http://gen1.ump.torch.net.pl:5002/timestamp',
+		{	url: 'http://osrm1.ump.waw.pl/OSRMpieszy/viaroute',
+			timestamp: 'http://osrm1.ump.waw.pl/OSRMpieszy/timestamp',
 			metric: 0,
 			label: 'ENGINE_3',
 		}
@@ -45,12 +45,15 @@ OSRM.DEFAULTS = {
 	WEBSITE_URL: document.URL.replace(/#*(\?.*|$)/i,""),					// truncates URL before first ?, and removes tailing #
 	HOST_GEOCODER_URL: 'http://nominatim.ict.pwr.wroc.pl/search',
 	HOST_REVERSE_GEOCODER_URL: 'http://nominatim.ict.pwr.wroc.pl/reverse',
-	HOST_SHORTENER_URL: 'http://api.bitly.com/v3/shorten?',
+	HOST_SHORTENER_URL: 'http://umapa.pl/yourls/yourls-api.php?',
+	//HOST_SHORTENER_URL: 'http://api.bitly.com/v3/shorten?',
 	
-	SHORTENER_PARAMETERS: 'login=umppcpl&apiKey=R_278cc70857c73f98c9b4ae4adaf94c99&format=json&callback=%jsonp&longUrl=%url',
-	SHORTENER_REPLY_PARAMETER: 'ShortURL',
+	//SHORTENER_PARAMETERS: 'login=umppcpl&apiKey=R_278cc70857c73f98c9b4ae4adaf94c99&format=json&callback=%jsonp&longUrl=%url',
+	SHORTENER_PARAMETERS: 'signature=4dde575d35&action=shorturl&format=jsonp&callback=%jsonp&url=%url',
+	SHORTENER_REPLY_PARAMETER: 'shorturl',
 	SHORTENER_REP1: 'data',
 	SHORTENER_REP2: 'url',	
+	COOKIE: 'ump_cookieB',
 	
 	ROUTING_ENGINE: 0,
 	DISTANCE_FORMAT: 0,														// 0: km, 1: miles
@@ -103,6 +106,11 @@ OSRM.DEFAULTS = {
 			url:'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
 			attribution:'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
 			options:{maxZoom: 18}
+		},
+		{	display_name: 'UMPdev@mapnik',
+			url:'http://marcom.homeip.net:1080/osm_tiles2/{z}/{x}/{y}.png',
+			attribution:'Map data &copy; 2012 UMP-pcPL, Imagery &copy; 2011 Mapnik',
+			options:{maxZoom: 19}
 		},
 		{
 			display_name: 'Bing Road',

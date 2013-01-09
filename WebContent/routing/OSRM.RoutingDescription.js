@@ -64,12 +64,13 @@ onClickCreateShortcut: function(src){
 	document.getElementById('route-link').innerHTML = '['+OSRM.loc("GENERATE_LINK_TO_ROUTE")+']';
 },
 showRouteLink: function(response){
-	if(!response || !response[OSRM.DEFAULTS.SHORTENER_REP1][OSRM.DEFAULTS.SHORTENER_REP2]) {
+	if(!response || !response[OSRM.DEFAULTS.SHORTENER_REPLY_PARAMETER]) {
 		OSRM.RoutingDescription.showRouteLink_TimeOut();
 		return;
 	}
 	
-	OSRM.G.active_shortlink = response[OSRM.DEFAULTS.SHORTENER_REP1][OSRM.DEFAULTS.SHORTENER_REP2];
+	//OSRM.G.active_shortlink = response[OSRM.DEFAULTS.SHORTENER_REP1][OSRM.DEFAULTS.SHORTENER_REP2];
+	OSRM.G.active_shortlink = response[OSRM.DEFAULTS.SHORTENER_REPLY_PARAMETER];
 	document.getElementById('route-link').innerHTML =
 		'[<a class="route-link" onClick="OSRM.RoutingDescription.showQRCode();">'+OSRM.loc("QR")+'</a>]' + ' ' +
 		'[<a class="route-link" target="_parent" href="' +OSRM.G.active_shortlink+ '">'+OSRM.G.active_shortlink.substring(7)+'</a>]';
