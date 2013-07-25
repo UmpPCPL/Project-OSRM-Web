@@ -39,11 +39,6 @@ OSRM.DEFAULTS = {
 			timestamp: 'http://osrm1.ump.waw.pl/OSRMpieszy/timestamp',
 			metric: 0,
 			label: 'ENGINE_3',
-		},
-		{	url: 'http://osrm1.ump.waw.pl/OSRMtesty/viaroute',
-			timestamp: 'http://osrm1.ump.waw.pl/OSRMtesty/timestamp',
-			metric: 0,
-			label: 'ENGINE_4',
 		}
 	],
 	
