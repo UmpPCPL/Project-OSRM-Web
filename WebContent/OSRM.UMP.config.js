@@ -54,6 +54,9 @@ OSRM.DEFAULTS = {
 	SHORTENER_REP1: 'data',
 	SHORTENER_REP2: 'url',	
 	COOKIE: 'ump_cookieC',
+	COOKIE_NAME: 'ump_cookieD',
+	COOKIE_HOST: 'ump.waw.pl',
+	COOKIE_PATH: '/',
 	
 	ROUTING_ENGINE: 0,
 	DISTANCE_FORMAT: 0,														// 0: km, 1: miles

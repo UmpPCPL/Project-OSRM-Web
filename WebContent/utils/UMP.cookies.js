@@ -39,8 +39,11 @@ function loadCookieOptions(cookie_name) {
 function saveCookieOptions(cookie_name, opts) {
 	var expiry = new Date();
 	expiry.setYear(expiry.getFullYear() + 10);
-	document.cookie = encodeURIComponent(cookie_name)+"="
-	+ encodeURIComponent(paramsToString(opts)) + "; expires=" + expiry.toGMTString();
+	var c = encodeURIComponent(cookie_name)+"="
+	+ encodeURIComponent(paramsToString(opts)) + "; expires=" + expiry.toGMTString()
+	+ "; path=" + OSRM.DEFAULTS.COOKIE_PATH
+	+ "; domain=" + OSRM.DEFAULTS.COOKIE_HOST;
+	document.cookie =c;
 } 
 
 function saveMapPosCookie(map) {
@@ -49,5 +52,5 @@ function saveMapPosCookie(map) {
         cookieOptions.lon = pos.lng;
         cookieOptions.lat = pos.lat;
         cookieOptions.zoom = map.getZoom();
-        saveCookieOptions(OSRM.DEFAULTS.COOKIE,cookieOptions);
+        saveCookieOptions(OSRM.DEFAULTS.COOKIE_NAME,cookieOptions);
 }
