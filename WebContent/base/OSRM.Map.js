@@ -50,9 +50,18 @@ init: function() {
 	// setup map
 	var optsUMP=loadCookieOptions("ump_cookie");
 	var opts=loadCookieOptions(OSRM.DEFAULTS.COOKIE_NAME);
-	OSRM.DEFAULTS.ONLOAD_LONGITUDE = optsUMP.lon || opts.lon || OSRM.DEFAULTS.ONLOAD_LONGITUDE;
-	OSRM.DEFAULTS.ONLOAD_LATITUDE = optsUMP.lat || opts.lat || OSRM.DEFAULTS.ONLOAD_LATITUDE;
-	OSRM.DEFAULTS.ONLOAD_ZOOM_LEVEL = optsUMP.zoom || opts.zoom || OSRM.DEFAULTS.ONLOAD_ZOOM_LEVEL;
+
+        var tstampUMP = optsUMP.tstamp || 1 ;
+        var tstamp = opts.tstamp || 1 ;
+        if ( tstampUMP > tstamp ) {
+	     OSRM.DEFAULTS.ONLOAD_LONGITUDE = optsUMP.lon || OSRM.DEFAULTS.ONLOAD_LONGITUDE;
+	     OSRM.DEFAULTS.ONLOAD_LATITUDE = optsUMP.lat  || OSRM.DEFAULTS.ONLOAD_LATITUDE;
+	     OSRM.DEFAULTS.ONLOAD_ZOOM_LEVEL = optsUMP.zoom || OSRM.DEFAULTS.ONLOAD_ZOOM_LEVEL;
+        }else{
+	     OSRM.DEFAULTS.ONLOAD_LONGITUDE = opts.lon || OSRM.DEFAULTS.ONLOAD_LONGITUDE;
+	     OSRM.DEFAULTS.ONLOAD_LATITUDE =  opts.lat || OSRM.DEFAULTS.ONLOAD_LATITUDE;
+	     OSRM.DEFAULTS.ONLOAD_ZOOM_LEVEL = opts.zoom || OSRM.DEFAULTS.ONLOAD_ZOOM_LEVEL;
+	}
 
 	OSRM.G.map = new OSRM.Control.Map('map', {
     	center: new L.LatLng(OSRM.DEFAULTS.ONLOAD_LATITUDE, OSRM.DEFAULTS.ONLOAD_LONGITUDE),

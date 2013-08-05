@@ -53,8 +53,7 @@ OSRM.DEFAULTS = {
 	SHORTENER_REPLY_PARAMETER: 'shorturl',
 	SHORTENER_REP1: 'data',
 	SHORTENER_REP2: 'url',	
-	COOKIE: 'ump_cookieC',
-	COOKIE_NAME: 'ump_cookieD',
+	COOKIE_NAME: 'ump_trasy_cookie',
 	COOKIE_HOST: 'ump.waw.pl',
 	COOKIE_PATH: '/',
 	
