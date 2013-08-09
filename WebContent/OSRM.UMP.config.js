@@ -116,15 +116,22 @@ OSRM.DEFAULTS = {
 		},
 		{
 			display_name: 'Bing Road',
-			apikey:'AjCb2f6Azv_xt9c6pl_xok96bgAYrXQNctnG4o07sTj4iS9N68Za4B3pRJyeCjGr',	// please use your own apikey (http://msdn.microsoft.com/en-us/library/ff428642.aspx) 
+			apikey:'AjCb2f6Azv_xt9c6pl_xok96bgAYrXQNctnG4o07sTj4iS9N68Za4B3pRJyeCjGr',	
 			options:{type:"Road", minZoom: 1},
 			bing:true,
 		},
 		{
 			display_name: 'Bing Aerial',
-			apikey:'AjCb2f6Azv_xt9c6pl_xok96bgAYrXQNctnG4o07sTj4iS9N68Za4B3pRJyeCjGr',	// please use your own apikey (http://msdn.microsoft.com/en-us/library/ff428642.aspx)
+			apikey:'AjCb2f6Azv_xt9c6pl_xok96bgAYrXQNctnG4o07sTj4iS9N68Za4B3pRJyeCjGr',	
 			options:{type:"Aerial", minZoom: 1},
 			bing:true,
+		}
+	],
+	OVERLAY_SERVERS: [
+	  	{	display_name: 'G StreetView (Ctrl+Klik)',
+			url:'https://mts2.google.com/mapslt?lyrs=svv&x={x}&y={y}&z={z}&w=256&h=256&hl=en&style=40,18',
+			attribution:'Google SV',
+			options:{opacity:0.8}
 		}
 	],
 

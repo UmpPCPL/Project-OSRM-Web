@@ -47,6 +47,15 @@ init: function() {
 		L.Util.stamp( base_maps[ tile_servers[i].display_name ] );			// stamp tile servers so that their order is correct in layers control
 	}
 
+	// setup overlay servers
+	var overlay_servers = OSRM.DEFAULTS.OVERLAY_SERVERS;
+	var overlay_maps = {};
+	for(var i=0, size=overlay_servers.length; i<size; i++) {
+	    overlay_servers[i].options.attribution = overlay_servers[i].attribution;
+    	    overlay_maps[ overlay_servers[i].display_name ] = new L.TileLayer( overlay_servers[i].url, overlay_servers[i].options );
+	    L.Util.stamp( overlay_maps[ overlay_servers[i].display_name ] );	
+	}
+
 	// setup map
 	var optsUMP=loadCookieOptions("ump_cookie");
 	var opts=loadCookieOptions(OSRM.DEFAULTS.COOKIE_NAME);
@@ -77,7 +86,7 @@ init: function() {
 	OSRM.G.map.locationsControl.addTo(OSRM.G.map);
 	
 	// add layer control
-	OSRM.G.map.layerControl = new OSRM.Control.Layers(base_maps, {});
+	OSRM.G.map.layerControl = new OSRM.Control.Layers(base_maps, overlay_maps);
 	OSRM.G.map.layerControl.addTo(OSRM.G.map);	
 
 	// add zoom control
@@ -129,6 +138,17 @@ contextmenu: function(e) {;},
 mousemove: function(e) { OSRM.Via.drawDragMarker(e); },
 click: function(e) {
 	OSRM.GUI.deactivateTooltip( "CLICKING" );	
+	if( e.originalEvent.shiftKey==true || e.originalEvent.altKey==true )
+		return;	
+	if( e.originalEvent.ctrlKey==true ){
+		var gurl ="http://maps.google.com/maps?ll=" +
+		    e.latlng.lat+","+e.latlng.lng +
+		    "&layer=c&cbll=" +
+		    e.latlng.lat+","+e.latlng.lng +
+		    "&cbp=11,0,0,0,0"
+//		    "&cbp=11,0,0,0,0&output=svembed"
+		window.open(gurl);	
+	}	
 	if( !OSRM.G.markers.hasSource() ) {
 		var index = OSRM.G.markers.setSource( e.latlng );
 		OSRM.Geocoder.updateAddress( OSRM.C.SOURCE_LABEL, OSRM.C.DO_FALLBACK_TO_LAT_LNG );
