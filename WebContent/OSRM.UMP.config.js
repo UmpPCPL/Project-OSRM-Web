@@ -30,12 +30,12 @@ OSRM.DEFAULTS = {
 			metric: 0,
 			label: 'ENGINE_2',
 		},
-		{	url: 'http://router.project-osrm.org/viaroute',
+/*		{	url: 'http://router.project-osrm.org/viaroute',
 			timestamp: 'http://router.project-osrm.org/timestamp',
 			metric: 0,
 			label: 'ENGINE_0',
 		},
-		{	url: 'http://osrm1.ump.waw.pl/OSRMpieszy/viaroute',
+*/		{	url: 'http://osrm1.ump.waw.pl/OSRMpieszy/viaroute',
 			timestamp: 'http://osrm1.ump.waw.pl/OSRMpieszy/timestamp',
 			metric: 0,
 			label: 'ENGINE_3',
@@ -43,8 +43,15 @@ OSRM.DEFAULTS = {
 	],
 	
 	WEBSITE_URL: document.URL.replace(/#*(\?.*|$)/i,""),					// truncates URL before first ?, and removes tailing #
-	HOST_GEOCODER_URL: 'http://nominatim.ict.pwr.wroc.pl/search',
-	HOST_REVERSE_GEOCODER_URL: 'http://nominatim.ict.pwr.wroc.pl/reverse',
+// bezpo¶rednio Wroc³aw
+//	HOST_GEOCODER_URL: 'http://nominatim.ict.pwr.wroc.pl/search',
+//	HOST_REVERSE_GEOCODER_URL: 'http://nominatim.ict.pwr.wroc.pl/reverse',
+// wpis w domenie UMP
+	HOST_GEOCODER_URL: 'http://nominatim.ump.waw.pl/search',
+	HOST_REVERSE_GEOCODER_URL: 'http://nominatim.ump.waw.pl/reverse',
+// próba: u Tadka
+//	HOST_GEOCODER_URL: 'http://194.145.228.22/search',
+//	HOST_REVERSE_GEOCODER_URL: 'http://194.145.228.22/reverse',
 	HOST_SHORTENER_URL: 'http://umapa.pl/yourls/yourls-api.php?',
 	//HOST_SHORTENER_URL: 'http://api.bitly.com/v3/shorten?',
 	
