@@ -24,21 +24,25 @@ OSRM.DEFAULTS = {
 			timestamp: 'http://osrm1.ump.waw.pl/OSRMauto/timestamp',
 			metric: 0,
 			label: 'ENGINE_1',
+			precision: 5 
 		},
 		{	url: 'http://osrm1.ump.waw.pl/OSRMrower/viaroute',
 			timestamp: 'http://osrm1.ump.waw.pl/OSRMrower/timestamp',
 			metric: 0,
 			label: 'ENGINE_2',
+			precision: 5 
 		},
-/*		{	url: 'http://router.project-osrm.org/viaroute',
+		{	url: 'http://router.project-osrm.org/viaroute',
 			timestamp: 'http://router.project-osrm.org/timestamp',
 			metric: 0,
 			label: 'ENGINE_0',
+			precision: 6 
 		},
-*/		{	url: 'http://osrm1.ump.waw.pl/OSRMpieszy/viaroute',
+		{	url: 'http://osrm1.ump.waw.pl/OSRMpieszy/viaroute',
 			timestamp: 'http://osrm1.ump.waw.pl/OSRMpieszy/timestamp',
 			metric: 0,
 			label: 'ENGINE_3',
+			precision: 5 
 		}
 	],
 	
@@ -49,13 +53,8 @@ OSRM.DEFAULTS = {
 // wpis w domenie UMP
 	HOST_GEOCODER_URL: 'http://nominatim.ump.waw.pl/search',
 	HOST_REVERSE_GEOCODER_URL: 'http://nominatim.ump.waw.pl/reverse',
-// próba: u Tadka
-//	HOST_GEOCODER_URL: 'http://194.145.228.22/search',
-//	HOST_REVERSE_GEOCODER_URL: 'http://194.145.228.22/reverse',
 	HOST_SHORTENER_URL: 'http://umapa.pl/yourls/yourls-api.php?',
-	//HOST_SHORTENER_URL: 'http://api.bitly.com/v3/shorten?',
 	
-	//SHORTENER_PARAMETERS: 'login=umppcpl&apiKey=R_278cc70857c73f98c9b4ae4adaf94c99&format=json&callback=%jsonp&longUrl=%url',
 	SHORTENER_PARAMETERS: 'signature=4dde575d35&action=shorturl&format=jsonp&callback=%jsonp&url=%url',
 	SHORTENER_REPLY_PARAMETER: 'shorturl',
 	SHORTENER_REP1: 'data',

@@ -39,7 +39,8 @@ show: function(response) {
 	}
 
 	// aggregate geometry for unnamed streets
-	var geometry = OSRM.RoutingGeometry._decode(response.route_geometry, 5);
+	var p = OSRM.DEFAULTS.ROUTING_ENGINES[OSRM.G.active_routing_engine].precision;
+	var geometry = OSRM.RoutingGeometry._decode(response.route_geometry, p);
 	var is_named = true;
 	var current_positions = [];
 	var all_positions = [];

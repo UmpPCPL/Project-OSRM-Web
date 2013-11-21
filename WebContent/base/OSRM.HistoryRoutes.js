@@ -145,8 +145,9 @@ OSRM.extend( OSRM.HistoryRoute,{
 	_equalMarkers: function(lhs, rhs) {
 		if(lhs.length != rhs.length)
 			return false;
+		var p = OSRM.DEFAULTS.ROUTING_ENGINES[OSRM.G.active_routing_engine].precision;
 		for(var i=0,size=lhs.length; i<size; i++) {
-			if( lhs[i].lat.toFixed(5) != rhs[i].lat.toFixed(5) || lhs[i].lng.toFixed(5) != rhs[i].lng.toFixed(5) )
+			if( lhs[i].lat.toFixed(p) != rhs[i].lat.toFixed(p) || lhs[i].lng.toFixed(p) != rhs[i].lng.toFixed(p) )
 				return false;
 		}
 		return true;
@@ -157,7 +158,8 @@ OSRM.extend( OSRM.HistoryRoute,{
 		if(!response)
 			return;
 		
-		var positions = OSRM.RoutingGeometry._decode(response.route_geometry, 5);
+		var p = OSRM.DEFAULTS.ROUTING_ENGINES[OSRM.G.active_routing_engine].precision;
+		var positions = OSRM.RoutingGeometry._decode(response.route_geometry, p);
 		this._history[history_id].route.setPositions(positions);
 		this._updateHints(response, history_id);
 	},

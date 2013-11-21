@@ -122,8 +122,8 @@ _click: function(button_id) {
 _mouseover: function(button_id) {
 	if( OSRM.G.active_alternative == button_id )
 		return;
-
-	var geometry = OSRM.RoutingGeometry._decode( OSRM.G.response.alternative_geometries[button_id], 5);
+	var p = OSRM.DEFAULTS.ROUTING_ENGINES[OSRM.G.active_routing_engine].precision;
+	var geometry = OSRM.RoutingGeometry._decode( OSRM.G.response.alternative_geometries[button_id], p);
 	OSRM.G.route.showAlternativeRoute(geometry);
 },
 _mouseout: function(button_id) {
