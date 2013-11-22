@@ -137,7 +137,6 @@ moved: function(e) {
 contextmenu: function(e) {;},
 mousemove: function(e) { OSRM.Via.drawDragMarker(e); },
 click: function(e) {
-	OSRM.GUI.deactivateTooltip( "CLICKING" );	
 	if( e.originalEvent.shiftKey==true || e.originalEvent.altKey==true )
 		return;	
 	if( e.originalEvent.ctrlKey==true ){

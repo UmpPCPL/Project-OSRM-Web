@@ -32,9 +32,6 @@ OSRM.init = function() {
 	OSRM.RoutingAlternatives.init();
 	OSRM.Localization.init();	
 	
-	// stop if in maintenance mode
-	if( OSRM.GUI.inMaintenance() == true )
-		return;
 	
  	// check if the URL contains some GET parameter, e.g. for showing a route
  	OSRM.parseParameters();

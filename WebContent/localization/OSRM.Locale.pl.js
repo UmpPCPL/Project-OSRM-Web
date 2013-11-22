@@ -72,6 +72,7 @@ OSRM.Localization["pl"] = {
 "ENGINE_1": "Samochód",
 "ENGINE_2": "Rower",
 "ENGINE_3": "Pieszo",
+"ENGINE_4": "Samochód 6exp",
 // directions
 "N": "północ",
 "E": "wschód",
