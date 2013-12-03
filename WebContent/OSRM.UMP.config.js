@@ -30,7 +30,7 @@ OSRM.DEFAULTS = {
 			timestamp: 'http://osrm1.ump.waw.pl/OSRMrower/timestamp',
 			metric: 0,
 			label: 'ENGINE_2',
-			precision: 5 
+			precision: 6 
 		},
 		{	url: 'http://router.project-osrm.org/viaroute',
 			timestamp: 'http://router.project-osrm.org/timestamp',
