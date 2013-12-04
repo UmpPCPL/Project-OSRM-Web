@@ -274,6 +274,10 @@ html, body
 
 
 /* styles for main-output information-box -> workaround for invisible scrollbars in Chrome */
+.leaflet-container {
+	cursor: default;
+}
+
 #information-box::-webkit-scrollbar
 {
 	height: 10px;
