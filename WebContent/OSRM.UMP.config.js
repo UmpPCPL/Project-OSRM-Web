@@ -38,17 +38,17 @@ OSRM.DEFAULTS = {
 			label: 'ENGINE_0',
 			precision: 6 
 		},
-	/*	{	url: 'http://osrm1.ump.waw.pl/OSRMtesty/viaroute',
+		{	url: 'http://osrm1.ump.waw.pl/OSRMtesty/viaroute',
 			timestamp: 'http://osrm1.ump.waw.pl/OSRMtesty/timestamp',
 			metric: 0,
 			label: 'ENGINE_4',
 			precision: 6 
-		}, */
+		}, 
 		{	url: 'http://osrm1.ump.waw.pl/OSRMpieszy/viaroute',
 			timestamp: 'http://osrm1.ump.waw.pl/OSRMpieszy/timestamp',
 			metric: 0,
 			label: 'ENGINE_3',
-			precision: 5 
+			precision: 6 
 		}
 	],
 	

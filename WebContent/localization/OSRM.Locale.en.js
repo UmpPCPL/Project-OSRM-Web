@@ -70,10 +70,10 @@ OSRM.Localization["en"] = {
 "NO_ROUTE_SELECTED": "No route selected",
 // routing engines
 "ENGINE_0": "Car (OSM)",
-"ENGINE_1": "Car (Poland only)",
+"ENGINE_1": "Car (UMP)",
 "ENGINE_2": "Bike (Poland only)",
 "ENGINE_3": "Pedestrian (Poland only)",
-"ENGINE_4": "Car (Poland 6exp)",
+"ENGINE_4": "Bus (Wawa exp)",
 // directions
 "N": "north",
 "E": "east",

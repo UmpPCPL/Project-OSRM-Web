@@ -72,7 +72,7 @@ OSRM.Localization["pl"] = {
 "ENGINE_1": "Samochód",
 "ENGINE_2": "Rower",
 "ENGINE_3": "Pieszo",
-"ENGINE_4": "Samochód 6exp",
+"ENGINE_4": "Bus Wawa (exp)",
 // directions
 "N": "północ",
 "E": "wschód",
@@ -107,6 +107,8 @@ OSRM.Localization["pl"] = {
 "DIRECTION_11-9":"Wjedź na rondo, zjedź dziewiątym zjazdem[ w <b>%s</b>]",
 "DIRECTION_11-x":"Wjedź na rondo, zjedź wybranym przez siebie zjazdem [ w <b>%s</b>]",
 "DIRECTION_15":"Cel został osiągnięty",
+"DIRECTION_16":"Wjedź pod prąd[ w <b>%s</b>]",
+"DIRECTION_17":"Kontynuuj[ w <b>%s</b>]",
 //legal
 "GUI_LEGAL_NOTICE": "GUI2 v"+OSRM.VERSION+" "+"- Routing engine and GUI: <a href='http://project-osrm.org/'>OSRM</a> - Geocoder: <a href='http://wiki.openstreetmap.org/wiki/Nominatim'>OSM</a>",
 "GUI_DATA_TIMESTAMP": "dane:  ",
