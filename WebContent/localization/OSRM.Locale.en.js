@@ -73,7 +73,7 @@ OSRM.Localization["en"] = {
 "ENGINE_1": "Car (UMP)",
 "ENGINE_2": "Bike (Poland only)",
 "ENGINE_3": "Pedestrian (Poland only)",
-"ENGINE_4": "Bus (Wawa exp)",
+"ENGINE_4": "Car EU (UMP)",
 // directions
 "N": "north",
 "E": "east",
